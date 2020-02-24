@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_title"
+        android:text="登陆后开始你的创作"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/app_titles"
+        android:layout_marginTop="130sp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="80dp">
+
+        <ImageView
+            android:id="@+id/welcome_logo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/app_logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:id="@+id/welcome_info"
+            android:text="@string/welcome_info"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/welcome_logo"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</RelativeLayout>

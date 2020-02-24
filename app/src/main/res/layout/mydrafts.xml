@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light_gray_bj">
+    <LinearLayout
+        android:id="@+id/top_draft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/bottom_border"
+        android:paddingLeft="10dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/back"
+            android:layout_marginTop="2dp"/>
+        <TextView
+            android:id="@+id/article_title"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:text="@string/message"/>
+        <TextView
+            android:id="@+id/count_drafts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/drafts_count"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/draft_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_more_msg"
+        android:background="@drawable/light_gray_bj"
+        android:gravity="center"/>
+
+    <ListView
+        android:id="@+id/draft_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_draft"
+        android:background="@color/white">
+    </ListView>
+
+</RelativeLayout>

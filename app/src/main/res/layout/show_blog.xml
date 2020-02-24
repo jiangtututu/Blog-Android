@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/bottom_border"
+        android:paddingLeft="10dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/back"
+            android:layout_marginTop="2dp"/>
+        <TextView
+            android:id="@+id/article_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:text="@string/tv_title"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sro_vw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:padding="5dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/author_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:gravity="center"
+                android:paddingBottom="8dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/author_head_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/image_head"
+                    app:riv_border_color="#333333"
+                    app:riv_border_width="2dp"
+                    app:riv_corner_radius="20dp"
+                    app:riv_mutate_background="true"
+                    app:riv_oval="false"
+                    app:riv_tile_mode="clamp" />
+
+                <TextView
+                    android:id="@+id/author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="3dp"
+                    android:text="张伟"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/motto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="22dp"
+                    android:text="此人很懒什么都没有留下"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/focus"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/darkblue_border_radius"
+                    android:text="@string/focus"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <WebView
+                android:id="@+id/article_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/author_info"
+                android:background="@color/white"/>
+
+            <LinearLayout
+                android:id="@+id/layout_article_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/article_area"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/article_info1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/article_time"
+                    android:textColor="@color/gray"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/article_info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/article_info"
+                    android:textColor="@color/gray"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/comments_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_article_info"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/comments"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"/>
+
+                <com.example.ayf.wsblogs.unify.MyListView
+                    android:id="@+id/comments_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.example.ayf.wsblogs.unify.MyListView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/top_border"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btn_praise"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:src="@drawable/praise" />
+
+        <TextView
+            android:id="@+id/count_praise"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:text="522" />
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:src="@drawable/comments" />
+
+        <EditText
+            android:id="@+id/my_comments"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/border_radius"
+            android:paddingLeft="10dp"
+            android:hint="@string/comments_text"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/release"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/darkblue_border_radius"
+            android:text="@string/release"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

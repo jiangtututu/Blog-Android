@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/bottom_border">
+
+        <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/author_head_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/image_head"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dp"
+            app:riv_corner_radius="20dp"
+            app:riv_mutate_background="true"
+            app:riv_oval="false"
+            app:riv_tile_mode="clamp" />
+
+        <TextView
+            android:id="@+id/comment_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="3dp"
+            android:text="张伟"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/reply_to_sb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="3dp"
+            android:text="to 小明"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/comments_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_below="@+id/comment_author"
+            android:layout_marginTop="10dp"
+            android:text="@string/comments_msg"
+            android:textColor="@color/gray"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/comments_time"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_below="@+id/comments_msg"
+            android:layout_marginTop="5dp"
+            android:text="@string/comments_time"
+            android:textColor="@color/gray"
+            android:textSize="10sp"/>
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:src="@drawable/praise"
+            android:id="@+id/comments_praise"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:layout_alignBottom="@+id/comments_time"/>
+
+        <ImageButton
+            android:id="@+id/reply_comments"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:src="@drawable/comments"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_alignBottom="@+id/comments_time"/>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

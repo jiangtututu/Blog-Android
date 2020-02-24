@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+<tab
+    id="@+id/tab_index"
+    title="首页"
+    icon="@mipmap/ic_main"
+    barColorWhenSelected="#65b2b6"
+    />
+<tab
+    id="@+id/tab_add"
+    title="新建"
+    icon="@mipmap/ic_add"
+    barColorWhenSelected="#3fc1c1"
+    />
+<tab
+    id="@+id/tab_myBlog"
+    title="我的"
+    icon="@mipmap/ic_my"
+    barColorWhenSelected="#4fb6aa"
+    />
+</tabs>
